@@ -1,0 +1,15 @@
+{% extends "site.html" %}
+
+{% block content %}
+<b>name:</b> {{ mt.name }}
+<br />
+
+{% if mt.rfc_url %}
+<b>see also:</b> <a href="{{ mt.rfc_url }}">IETF RFC {{ mt.rfc }}</a>
+{% endif %}
+
+{% if mt.application_url %}
+<b>see also:</b> <a href="{{ mt.application_url }}">IANA application</a>
+{% endif %}
+
+{% endblock %}

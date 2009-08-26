@@ -1,0 +1,7 @@
+{% extends "site.html" %}
+
+{% block content %}
+{% for t in types %}
+<a href="/{{ t }}">{{ t }}</a><br />
+{% endfor %}
+{% endblock %}
