@@ -14,13 +14,14 @@ a:hover {
 }
 
 div.title {
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 
 .title a {
     font: bold 30pt Monaco;
     color: black;
-    padding: 10px;
+    border: medium groove gray;
+    padding: 5px;
 }
 
 .title a:hover {
@@ -33,6 +34,7 @@ td.label {
 }
 
 #footer {
+    margin-top: 10%;
     vertical-align: bottom;
     text-align: left;
 }
