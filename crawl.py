@@ -32,19 +32,26 @@ def sub_types(content_type):
                 sub_type = cells[1].font.string.strip()
             elif cells[1].string:
                 sub_type = cells[1].string.strip()
-            if cells[2].a and 'RFC' in cells[2].a.string:
-                rfc_url = cells[2].a['href']
-            yield sub_type, app_url, rfc_url
+
+            if cells[-1].a and 'RFC' in cells[-1].a.string:
+                rfc_url = cells[-1].a['href']
+
+            obsolete = False
+            if 'obsolete' in sub_type:
+                obsolete = True
+                sub_type = sub_type.replace(' (obsolete)', '')
+
+            yield sub_type, app_url, rfc_url, obsolete
 
 def main():
     csv_writer = csv.writer(open('mediatypes.csv', 'w'))
     for content_type in content_types():
-        for sub_type, app_url, rfc_url in sub_types(content_type):
+        for sub_type, app_url, rfc_url, obsolete in sub_types(content_type):
             if sub_type == '&nbsp;':
                 continue
             name = "%s/%s" % (content_type, sub_type)
             csv_writer.writerow([name, content_type, sub_type, app_url, 
-                                 rfc_url])
+                                 rfc_url, obsolete])
 
 if __name__ == '__main__':
     main()

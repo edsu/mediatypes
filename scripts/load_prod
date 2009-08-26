@@ -1,0 +1,3 @@
+#!/bin/sh
+
+appcfg.py upload_data --config_file=loaders.py --filename=mediatypes.csv --kind=MediaType ~/Projects/mediatypes

@@ -4,7 +4,7 @@
 <table>
     {% for mt in media_types %}
     <tr>
-        <td><a href="{{ mt.url }}">{{ mt.name }}</a></td>
+        <td><a href="{{ mt.relative_uri }}">{{ mt.name }}</a></td>
     </tr>
     {% endfor %}
 </table>

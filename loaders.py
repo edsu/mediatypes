@@ -14,7 +14,8 @@ class MediaTypeLoader(bulkloader.Loader):
                                     ('type', str),
                                     ('subtype', str),
                                     ('application_url', str),
-                                    ('rfc_url', str)
+                                    ('rfc_url', str),
+                                    ('obsolete', bool),
                                    ])
 
 loaders = [MediaTypeLoader]

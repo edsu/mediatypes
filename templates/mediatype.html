@@ -1,15 +1,37 @@
 {% extends "site.html" %}
 
 {% block content %}
-<b>name:</b> {{ mt.name }}
-<br />
+<table about="{{ mt.uri }}" typeof="mediatypes:MediaType">
+    <tr>
+        <td class="label">Name:</td>
+        <td property="rdfs:label">{{ mt.name }}</td>
+    </tr>
+    <tr>
+        <td class="label">URI:</td>
+        <td><a href="{{ mt.uri }}">{{ mt.uri }}</a></td>
+    </tr>
 
-{% if mt.rfc_url %}
-<b>see also:</b> <a href="{{ mt.rfc_url }}">IETF RFC {{ mt.rfc }}</a>
-{% endif %}
+    {% if mt.obsolete %}
+    <tr>
+        <td class="label">Status:</td>
+        <td>obsolete</td>
+    </tr>
+    {% endif %}
 
-{% if mt.application_url %}
-<b>see also:</b> <a href="{{ mt.application_url }}">IANA application</a>
-{% endif %}
+    {% if mt.rfc_url %}
+    <tr>
+        <td class="label">See Also:</td>
+        <td><a rel="rdfs:seeAlso" href="{{ mt.rfc_url }}">IETF RFC {{ mt.rfc }}</a></td>
+    </tr>
+    {% endif %}
+
+    {% if mt.application_url %}
+    <tr>
+        <td class="label">See Also:</td>
+        <td><a rel="rdfs:seeAlso" href="{{ mt.application_url }}">IANA application</a></td>
+    </tr>
+    {% endif %}
+
+</table>
 
 {% endblock %}

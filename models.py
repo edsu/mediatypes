@@ -8,9 +8,13 @@ class MediaType(db.Model):
     subtype = db.StringProperty()
     application_url = db.StringProperty()
     rfc_url = db.StringProperty()
+    obsolete = db.BooleanProperty()
     created = db.DateTimeProperty(auto_now_add=True)
 
-    def url(self):
+    def uri(self):
+        return "http://purl.org/NET/mediatypes" + self.relative_uri()
+
+    def relative_uri(self):
         return "/%s/%s" % (self.type, self.subtype)
 
     def rfc(self):
