@@ -11,12 +11,15 @@ class MediaType(db.Model):
     obsolete = db.BooleanProperty()
     created = db.DateTimeProperty(auto_now_add=True)
 
+    @property
     def uri(self):
-        return "http://purl.org/NET/mediatypes" + self.relative_uri()
+        return "http://purl.org/NET/mediatypes" + self.relative_uri
 
+    @property
     def relative_uri(self):
         return "/%s/%s" % (self.type, self.subtype)
 
+    @property
     def rfc(self):
         if self.rfc_url == None:
             return None

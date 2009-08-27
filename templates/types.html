@@ -1,7 +1,45 @@
 {% extends "site.html" %}
 
 {% block content %}
-{% for t in types %}
-<a href="/{{ t }}">{{ t }}</a><br />
-{% endfor %}
+
+<div id="wrap">
+
+<div id="left_column">
+<table>
+    <th>Content Types</th>
+    {% for t in types %}
+    <tr class="{% cycle a,b %}">
+        <td><a href="/{{ t }}">{{ t }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+<div id ="right_column">
+<p>
+This website mints <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data</a> URIs for 
+<a href="http://www.iana.org/assignments/media-types/">MIME Media Types</a> 
+that are registered with the 
+<a href="www.iana.org">Internet Assigned Numbers Authority</a>. URIs for
+Media Types comes in handy when using vocabulary like <a
+    href="http://dublincore.org/documents/dcmi-terms/#terms-hasFormat">dcterms:hasFormat</a>:
+</p>
+
+<p style="text-align: center;">
+    <img src="/static/graph.png" />
+</p>
+
+<p>
+The data presented here is available as a single rdf/xml <a href="/dump.rdf">file</a>, and is routinely 
+scraped from IANA using code in the <a href="http://code.google.com/p/mediatypes">mediatypes</a> Google Code
+project. This site itself is running in the cloud on 
+<a href="http://code.google.com/p/googleappengine/">Google AppEngine</a>. 
+If at any time IANA provides these URIs themselves the PURLs can be 
+updated appropriately.
+</p>
+</div>
+
+</div>
+
+
 {% endblock %}

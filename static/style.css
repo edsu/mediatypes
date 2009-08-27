@@ -1,0 +1,70 @@
+body {
+    margin: 5% 5% 5% 5%;
+    font: 14pt Monaco;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+div.title {
+    margin-bottom: 5%;
+}
+
+.title a {
+    font: bold 30pt Monaco;
+    color: black;
+    background-color: #eeeeee;
+    padding: 15px;
+}
+
+.title a:hover {
+    color: black;
+}
+
+th { 
+    text-align: left;
+}
+
+td.label {
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+tr.a {
+    background-color: #eeeeee;
+}
+
+tr.b {
+    background-color: white;
+}
+
+#wrap {
+    width: 750px;
+    margin-left: 0 auto;
+}
+
+#left_column {
+    float: left;
+    width: 150px;
+}
+
+#right_column {
+    float: right;
+    width: 550px;
+    font-size: 12pt;
+    text-align: left;
+}
+
+#footer {
+    margin-top: 20%;
+    clear: both;
+    text-align: center;
+}
+

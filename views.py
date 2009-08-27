@@ -7,6 +7,10 @@ from google.appengine.ext import db
 
 import models
 
+from rdflib.graph import ConjunctiveGraph
+from rdflib.term import URIRef, Literal
+from rdflib.namespace import Namespace, RDF, RDFS
+
 class MyRequestHandler(webapp.RequestHandler):
     def render(self, template_file, context):
         self.response.out.write(template.render(template_file, context))
@@ -34,7 +38,22 @@ class MediaType(MyRequestHandler):
         title = mt.name
         return self.render('templates/mediatype.html', locals())
 
+class Dump(MyRequestHandler):
+    def get(self):
+        g = ConjunctiveGraph()
+        ns = Namespace('http://purl.org/NET/mediatype#')
+        for mt in models.MediaType.all():
+            g.add((URIRef(mt.uri), RDF.type, ns['MediaType']))
+            g.add((URIRef(mt.uri), RDFS.label, Literal(mt.name)))
+            if mt.rfc_url:
+                g.add((URIRef(mt.uri), RDFS.seeAlso, URIRef(mt.rfc_url)))
+            if mt.application_url:
+                g.add((URIRef(mt.uri), RDFS.seeAlso, URIRef(mt.application_url)))
+        self.response.headers['Content-Type'] = 'application/rdf+xml'
+        g.serialize(self.response.out)
+
 urls = [
+        (r'/dump.rdf$', Dump),
         (r'/(.+)/(.+)$', MediaType),
         (r'/(.+)$', Type),
         (r'/', Home),

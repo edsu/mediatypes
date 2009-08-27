@@ -10,7 +10,7 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-# Unused in query history -- copied from input.
+# Used once in query history.
 - kind: MediaType
   properties:
   - name: subtype
@@ -18,7 +18,7 @@ indexes:
   - name: name
     direction: desc
 
-# Used 28 times in query history.
+# Used 124 times in query history.
 - kind: MediaType
   properties:
   - name: type

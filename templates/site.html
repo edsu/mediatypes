@@ -4,19 +4,20 @@
       xmlns:mediatypes="http://purl.org/NET/mediatypes#">
       <head>
         <title>media-types - {{ title }}</title>
-        <link rel="stylesheet" href="/css/style.css" type="text/css"></link>
+        <link rel="stylesheet" href="/static/style.css" type="text/css"></link>
     </head>
 
     <body>
         <div class="title">
             <a href="/">media-types</a>
         </div>
-        {% block content %}{% endblock %}
-
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
         <div id="footer">
             <p>
-            <img alt="rdfa" src="/images/rdfa.png" />
-            <a href="http://code.google.com/p/mediatypes/"><img alt="mediatypes Google Code project" src="/images/google_code.png" border="0"></a>
+            <img alt="rdfa" src="/static/rdfa.png" />
+            <a href="http://code.google.com/p/mediatypes/"><img alt="mediatypes Google Code project" src="/static/google_code.png" border="0"></a>
             </p>
         </div>
     </body>
