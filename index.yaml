@@ -18,7 +18,7 @@ indexes:
   - name: name
     direction: desc
 
-# Used 124 times in query history.
+# Used 128 times in query history.
 - kind: MediaType
   properties:
   - name: type
