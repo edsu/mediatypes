@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, 'lib')
+
 import urllib
 
 from google.appengine.ext import webapp
@@ -20,7 +23,7 @@ class Home(MyRequestHandler):
         title = 'Home'
         types = list(set([mt.type for mt in models.MediaType.all()]))
         types.sort()
-        return self.render('templates/types.html', locals())
+        return self.render('templates/home.html', locals())
 
 class Type(MyRequestHandler):
     def get(self, type):
