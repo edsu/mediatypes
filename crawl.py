@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
-import urllib
 import csv 
+import sys
+import urllib
+
+sys.path.insert(0, 'lib')
 
 from BeautifulSoup import BeautifulSoup
 

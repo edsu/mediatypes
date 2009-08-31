@@ -52,6 +52,7 @@ application/index.obj,application,index.obj,,http://www.rfc-editor.org/rfc/rfc26
 application/index.response,application,index.response,,http://www.rfc-editor.org/rfc/rfc2652.txt,False
 application/index.vnd,application,index.vnd,,http://www.rfc-editor.org/rfc/rfc2652.txt,False
 application/iotp,application,iotp,,http://www.rfc-editor.org/rfc/rfc2935.txt,False
+application/ipfix,application,ipfix,,http://tools.ietf.org/html/draft-ietf-ipfix-file-05,False
 application/ipp,application,ipp,,http://www.rfc-editor.org/rfc/rfc2910.txt,False
 application/isup,application,isup,,http://www.ietf.org/rfc/rfc3204.txt,False
 application/javascript,application,javascript,,http://www.rfc-editor.org/rfc/rfc4329.txt,False
