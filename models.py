@@ -3,6 +3,9 @@ import re
 from google.appengine.ext import db
 
 class Crawl(db.Model):
+    """
+    A model for recording when a crawl ocurred.
+    """
     created = db.DateTimeProperty(auto_now_add=True)
 
 class MediaType(db.Model):
