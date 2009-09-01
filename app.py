@@ -7,12 +7,15 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
+from google.appengine.api import memcache
 
 import models
 
 from rdflib.graph import ConjunctiveGraph
 from rdflib.term import URIRef, Literal
 from rdflib.namespace import Namespace, RDF, RDFS
+
+memcache_ttl = 60 * 60 # 1 hr
 
 class MyRequestHandler(webapp.RequestHandler):
     def render(self, template_file, context):
@@ -25,8 +28,11 @@ class Home(MyRequestHandler):
     def get(self):
         title = 'Home'
         host = self.host()
-        types = list(set([mt.type for mt in models.MediaType.all()]))
-        types.sort()
+        types = memcache.get("types")
+        if not types:
+            types = list(set([mt.type for mt in models.MediaType.all()]))
+            types.sort()
+            memcache.add("types", types, memcache_ttl)
         return self.render('templates/home.html', locals())
 
 class Type(MyRequestHandler):
