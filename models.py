@@ -9,6 +9,9 @@ class Crawl(db.Model):
     created = db.DateTimeProperty(auto_now_add=True)
 
 class MediaType(db.Model):
+    """
+    A media type and its respective information.
+    """
     name = db.StringProperty()
     type = db.StringProperty()
     subtype = db.StringProperty()
