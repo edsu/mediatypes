@@ -38,8 +38,11 @@ class Home(MyRequestHandler):
 class Type(MyRequestHandler):
     def get(self, type):
         title = type
-        media_types = models.MediaType.gql("WHERE type = :1 ORDER BY name", 
-                                           type)
+        media_types = memcache.get(type)
+        if not media_types:
+            media_types = models.MediaType.gql("WHERE type = :1 ORDER BY name", 
+                                               type)
+            memcache.add(type, media_types, memcache_ttl)
         return self.render('templates/type.html', locals())
 
 class MediaType(MyRequestHandler):
