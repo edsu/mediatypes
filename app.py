@@ -18,9 +18,13 @@ class MyRequestHandler(webapp.RequestHandler):
     def render(self, template_file, context):
         self.response.out.write(template.render(template_file, context))
 
+    def host(self):
+        return self.request.headers['HOST']
+
 class Home(MyRequestHandler):
     def get(self):
         title = 'Home'
+        host = self.host()
         types = list(set([mt.type for mt in models.MediaType.all()]))
         types.sort()
         return self.render('templates/home.html', locals())
@@ -55,17 +59,29 @@ class Dump(MyRequestHandler):
         self.response.headers['Content-Type'] = 'application/rdf+xml'
         g.serialize(self.response.out)
 
+class Robots(MyRequestHandler):
+    def get(self):
+        host = self.host()
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.render('templates/robots.txt', locals())
+
+class Sitemap(MyRequestHandler):
+    def get(self):
+        host = self.host()
+        media_types = models.MediaType.all()
+        self.response.headers['Content-Type'] = 'text/xml'
+        self.render('templates/sitemap.xml', locals())
+
 urls = [
-        (r'/dump.rdf$', Dump),
+        ('/dump.rdf', Dump),
+        ('/robots.txt', Robots),
+        ('/sitemap.xml', Sitemap),
         (r'/(.+)/(.+)$', MediaType),
         (r'/(.+)$', Type),
         (r'/', Home),
        ]
 
 application = webapp.WSGIApplication(urls, debug=True)
-
-def render_template(template, context):
-    self.response
 
 def main():
     run_wsgi_app(application)

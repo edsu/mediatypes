@@ -3,7 +3,8 @@ from google.appengine.tools import bulkloader
 
 import sys
 import os
-sys.path.insert(0, 'lib')
+sys.path.insert(0, '/home/ed/projects/mediatypes/lib')
+sys.path.insert(0, '/home/ed/projects/mediatypes/')
 
 import models
 

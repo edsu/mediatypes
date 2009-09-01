@@ -15,14 +15,14 @@
 </table>
 </div>
 
-<div about="#mimetypes" id="right_column">
+<div about="http://purl.org/NET/mediatypes" typeof="void:DataSet" id="right_column">
 <p>
-This <a rel="foaf:homepage"
-    href="http://mediatypes.appspot.com">website</a> mints <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data</a> URIs for 
-<a property="dct:title" href="http://www.iana.org/assignments/media-types/">MIME Media Types</a> 
+This <a rel="foaf:homepage" href="http://{{ host }}">website</a> 
+mints <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data</a> 
+URIs for <a rel="dct:source" href="http://www.iana.org/assignments/media-types/">MIME Media Types</a> 
 that are registered with the 
-<a href="www.iana.org">Internet Assigned Numbers Authority</a>. URIs for
-Media Types comes in handy when using vocabulary like <a
+<a rel="dct:creator" href="http://www.iana.org/">Internet Assigned Numbers Authority</a>. URIs for
+Media Types come in handy when using vocabulary like <a
     href="http://dublincore.org/documents/dcmi-terms/#terms-hasFormat">dcterms:hasFormat</a>:
 </p>
 
@@ -31,8 +31,9 @@ Media Types comes in handy when using vocabulary like <a
 </p>
 
 <p>
-The data presented here is available as a single rdf/xml <a href="/dump.rdf">file</a>, and is routinely 
-scraped from IANA using code in the <a href="http://code.google.com/p/mediatypes">mediatypes</a> Google Code
+The data presented here is also available as a single rdf/xml 
+<a rel="void:dataDump" href="/dump.rdf">file</a>, and is routinely scraped from IANA using code in 
+the <a href="http://code.google.com/p/mediatypes" typeof="doap:Project">mediatypes</a> Google Code
 project. This site itself is running in the cloud on 
 <a href="http://code.google.com/p/googleappengine/">Google AppEngine</a>. 
 If at any time IANA provides these URIs themselves the PURLs can be 

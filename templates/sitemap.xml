@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:sc="http://sw.deri.org/2007/07/sitemapextension/scschema.xsd">
+    <sc:dataDumpLocation>http://{{ host }}/dump.rdf</sc:dataDumpLocation>
+    <sc:datasetURI>http://{{ host }}#mediatypes</sc:datasetURI>
+    <sc:datasetLabel>Media-Types</sc:datasetLabel>
+{% for mt in media_types %}
+    <url>
+        <loc>http://{{ host }}{{ mt.relative_uri }}</loc>
+    </url>
+{% endfor %}
+</urlset>
