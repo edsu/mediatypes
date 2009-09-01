@@ -4,7 +4,7 @@ from google.appengine.ext import db
 
 class Crawl(db.Model):
     """
-    A model for recording when a crawl ocurred.
+    A model for recording a crawl. 
     """
     created = db.DateTimeProperty(auto_now_add=True)
 
