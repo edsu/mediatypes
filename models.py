@@ -2,6 +2,9 @@ import re
 
 from google.appengine.ext import db
 
+class Crawl(db.Model):
+    created = db.DateTimeProperty(auto_now_add=True)
+
 class MediaType(db.Model):
     name = db.StringProperty()
     type = db.StringProperty()
