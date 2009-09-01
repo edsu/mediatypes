@@ -5,8 +5,10 @@
 <div id="wrap">
 
 <div id="left_column">
-<table>
-    <th>Content Types</th>
+    <table>
+    <tr>
+        <th>Content Types</th>
+    </tr>
     {% for t in types %}
     <tr class="{% cycle a,b %}">
         <td><a href="/{{ t }}">{{ t }}</a></td>
@@ -21,13 +23,14 @@ This <a rel="foaf:homepage" href="http://{{ host }}">website</a>
 mints <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data</a> 
 URIs for <a rel="dct:source" href="http://www.iana.org/assignments/media-types/">MIME Media Types</a> 
 that are registered with the 
-<a rel="dct:creator" href="http://www.iana.org/">Internet Assigned Numbers Authority</a>. URIs for
-Media Types come in handy when using vocabulary like <a
+<a rel="dct:creator" href="http://www.iana.org/">Internet Assigned Numbers
+    Authority</a>. 
+A URI for a <span about="mediatypes:MediaType" typeof="rdfs:Class" property="rdfs:label">Media Type</span> come in handy when using vocabulary like <a
     href="http://dublincore.org/documents/dcmi-terms/#terms-hasFormat">dcterms:hasFormat</a>:
 </p>
 
 <p style="text-align: center;">
-    <img src="/static/graph.png" />
+<img alt="example graph" src="/static/graph.png" />
 </p>
 
 <p>

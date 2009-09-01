@@ -7,7 +7,9 @@
     </tr>
     {% for mt in media_types %}
     <tr class="{% cycle a,b %}">
-        <td><a href="{{ mt.relative_uri }}">{{ mt.name }}</a></td>
+        <td>
+            <a href="{{ mt.relative_uri }}"><span about="{{ mt.uri }}" property="dct:title" typeof="mediatypes:MediaType">{{ mt.name }}</span></a>
+        </td>
     </tr>
     {% endfor %}
 </table>
