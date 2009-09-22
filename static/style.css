@@ -1,6 +1,6 @@
 body {
     margin: 5% 5% 5% 5%;
-    font: 14pt Monaco;
+    font: 12pt Monaco;
 }
 
 a {
@@ -15,10 +15,7 @@ a:hover {
 
 div.title {
     margin-bottom: 5%;
-}
-
-.title a {
-    font: bold 30pt Monaco;
+    font: bold 20pt Monaco;
     color: black;
     background-color: #eeeeee;
     padding: 15px;
@@ -46,19 +43,18 @@ tr.b {
 }
 
 #wrap {
-    width: 750px;
+    width: 725px;
     margin-left: 0 auto;
 }
 
 #left_column {
     float: left;
-    width: 150px;
+    width: 100px;
 }
 
 #right_column {
     float: right;
-    width: 550px;
-    font-size: 12pt;
+    width: 600px;
     text-align: left;
 }
 

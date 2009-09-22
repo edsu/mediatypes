@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import re
 import csv 
 import sys
 import urllib
@@ -40,10 +41,10 @@ def sub_types(content_type):
                 rfc_url = cells[-1].a['href']
 
             obsolete = False
-            if 'obsolete' in sub_type:
+            match = re.search('( \(obsolete\))', sub_type, re.IGNORECASE)
+            if match:
                 obsolete = True
-                sub_type = sub_type.replace(' (obsolete)', '')
-
+                sub_type = sub_type.replace(match.group(1), '')
             yield sub_type, app_url, rfc_url, obsolete
 
 def main():

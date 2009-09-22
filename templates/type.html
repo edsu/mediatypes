@@ -3,12 +3,12 @@
 {% block content %}
 <table>
     <tr>
-        <th>{{ type }}/*</th>
+        <th>Subtypes</th>
     </tr>
     {% for mt in media_types %}
     <tr class="{% cycle a,b %}">
         <td>
-            <a href="{{ mt.relative_uri }}"><span about="{{ mt.uri }}" property="rdfs:label" typeof="mediatypes:MediaType">{{ mt.name }}</span></a>
+            <a href="{{ mt.relative_uri }}"><span about="{{ mt.uri }}" property="rdfs:label" typeof="mediatypes:MediaType">{{ mt.subtype }}</span></a>
         </td>
     </tr>
     {% endfor %}

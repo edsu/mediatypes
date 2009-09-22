@@ -15,11 +15,31 @@
 
     <body>
         <div class="title">
-            <a resource="http://purl.org/NET/mediatypes" property="dct:title" href="/">media-types</a>
+            <a resource="http://purl.org/NET/mediatypes" property="dct:title" href="/">media-types</a> 
+            {% if title %}
+            - {{ title }}
+            {% endif %}
         </div>
-        <div id="content">
+
+    <div id="wrap">
+
+        <div id="left_column">
+            <table>
+            <tr>
+                <th>Types</th>
+            </tr>
+            {% for t in types %}
+            <tr class="{% cycle a,b %}">
+                <td><a href="/{{ t }}">{{ t }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+
+        <div id="right_column">
             {% block content %}{% endblock %}
         </div>
+</div>
         <div id="footer">
             <p>
             <img alt="rdfa" src="/static/rdfa.png" />

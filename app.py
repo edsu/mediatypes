@@ -26,31 +26,26 @@ class MyRequestHandler(webapp.RequestHandler):
 
 class Home(MyRequestHandler):
     def get(self):
-        title = 'Home'
         host = self.host()
-        types = memcache.get("types")
-        if not types:
-            types = list(set([mt.type for mt in models.MediaType.all()]))
-            types.sort()
-            memcache.add("types", types, memcache_ttl)
+        types = fetch_types()
         return self.render('templates/home.html', locals())
 
 class Type(MyRequestHandler):
     def get(self, type):
-        title = type
-        media_types = memcache.get(type)
-        if not media_types:
-            media_types = models.MediaType.gql("WHERE type = :1 ORDER BY name", 
-                                               type)
-            memcache.add(type, media_types, memcache_ttl)
+        title = "%s/*" % type
+        types = fetch_types()
+        media_types = fetch_mediatypes(type)
         return self.render('templates/type.html', locals())
 
 class MediaType(MyRequestHandler):
     def get(self, type, subtype):
+        types = fetch_types()
         subtype = urllib.unquote(subtype)
-        mt = models.MediaType.gql("WHERE type = :1 AND subtype = :2",
-                                  type, subtype)
-        mt = mt.fetch(1)[0]
+        mt = db.Query(models.MediaType).filter('type =', type).filter('subtype =', subtype).get()
+        if not mt:
+            title = "Not Found"
+            message = "%s/%s not found" % (type, subtype)
+            return self.render('templates/404.html', locals())
         title = mt.name
         return self.render('templates/mediatype.html', locals())
 
@@ -80,6 +75,22 @@ class Sitemap(MyRequestHandler):
         media_types = models.MediaType.all()
         self.response.headers['Content-Type'] = 'text/xml'
         self.render('templates/sitemap.xml', locals())
+
+def fetch_types():
+    types = memcache.get("types")
+    if not types:
+        types = list(set([mt.type for mt in models.MediaType.all()]))
+        types.sort()
+        memcache.add("types", types, memcache_ttl)
+    return types
+
+def fetch_mediatypes(type):
+        media_types = memcache.get(type)
+        if not media_types:
+            media_types = models.MediaType.gql("WHERE type = :1 ORDER BY name", 
+                                               type)
+            memcache.add(type, media_types, memcache_ttl)
+        return media_types
 
 urls = [
         ('/dump.rdf', Dump),

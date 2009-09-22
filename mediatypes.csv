@@ -31,7 +31,7 @@ application/EDI-Consent,application,EDI-Consent,,http://www.rfc-editor.org/rfc/r
 application/EDIFACT,application,EDIFACT,,http://www.rfc-editor.org/rfc/rfc1767.txt,False
 application/EDI-X12,application,EDI-X12,,http://www.rfc-editor.org/rfc/rfc1767.txt,False
 application/emma+xml,application,emma+xml,http://www.iana.orghttp://www.w3.org/TR/2007/CR-emma-20071211/#media-type-registration,,False
-application/epp+xml,application,epp+xml,,http://tools.ietf.org/html/draft-hollenbeck-rfc4930bis,False
+application/epp+xml,application,epp+xml,,http://tools.ietf.org/html/rfc5730,False
 application/eshop,application,eshop,http://www.iana.org/assignments/media-types/application/eshop,,False
 application/example,application,example,,http://www.rfc-editor.org/rfc/rfc4735.txt,False
 application/fastinfoset,application,fastinfoset,http://www.iana.org/assignments/media-types/application/fastinfoset,,False
@@ -154,7 +154,7 @@ application/simple-filter+xml,application,simple-filter+xml,,http://www.ietf.org
 application/simple-message-summary,application,simple-message-summary,,http://www.rfc-editor.org/rfc/rfcxxxx.txt,False
 application/simpleSymbolContainer,application,simpleSymbolContainer,http://www.iana.org/assignments/media-types/application/simpleSymbolContainer,,False
 application/slate,application,slate,http://www.iana.org/assignments/media-types/application/slate,,False
-application/smil (OBSOLETE),application,smil (OBSOLETE),,http://www.ietf.org/rfc/rfc4536.txt,False
+application/smil,application,smil,,http://www.ietf.org/rfc/rfc4536.txt,True
 application/smil+xml,application,smil+xml,,http://www.ietf.org/rfc/rfc4536.txt,False
 application/soap+fastinfoset,application,soap+fastinfoset,http://www.iana.org/assignments/media-types/application/soap+fastinfoset,,False
 application/soap+xml,application,soap+xml,,http://www.rfc-editor.org/rfc/rfc3902.txt,False
@@ -212,6 +212,7 @@ application/vnd.chipnuts.karaoke-mmd,application,vnd.chipnuts.karaoke-mmd,http:/
 application/vnd.cinderella,application,vnd.cinderella,http://www.iana.org/assignments/media-types/application/vnd.cinderella,,False
 application/vnd.cirpack.isdn-ext,application,vnd.cirpack.isdn-ext,http://www.iana.org/assignments/media-types/application/vnd.cirpack.isdn-ext,,False
 application/vnd.claymore,application,vnd.claymore,http://www.iana.org/assignments/media-types/application/vnd.claymore,,False
+application/vnd.cloanto.rp9,application,vnd.cloanto.rp9,http://www.iana.org/assignments/media-types/application/vnd.cloanto.rp9,,False
 application/vnd.clonk.c4group,application,vnd.clonk.c4group,http://www.iana.org/assignments/media-types/application/vnd.clonk.c4group,,False
 application/vnd.commerce-battelle,application,vnd.commerce-battelle,http://www.iana.org/assignments/media-types/application/vnd.commerce-battelle,,False
 application/vnd.commonspace,application,vnd.commonspace,http://www.iana.org/assignments/media-types/application/vnd.commonspace,,False
@@ -283,6 +284,7 @@ application/vnd.etsi.iptvueprofile+xml,application,vnd.etsi.iptvueprofile+xml,ht
 application/vnd.etsi.mcid+xml,application,vnd.etsi.mcid+xml,http://www.iana.org/assignments/media-types/application/vnd.etsi.mcid+xml,,False
 application/vnd.etsi.sci+xml,application,vnd.etsi.sci+xml,http://www.iana.org/assignments/media-types/application/vnd.etsi.sci+xml,,False
 application/vnd.etsi.simservs+xml,application,vnd.etsi.simservs+xml,http://www.iana.org/assignments/media-types/application/vnd.etsi.simservs+xml,,False
+application/vnd.etsi.tsl+xml,application,vnd.etsi.tsl+xml,http://www.iana.org/assignments/media-types/application/vnd.etsi.tsl+xml,,False
 application/vnd.etsi.tsl.der,application,vnd.etsi.tsl.der,http://www.iana.org/assignments/media-types/application/vnd.etsi.tsl.der,,False
 application/vnd.eudora.data,application,vnd.eudora.data,http://www.iana.org/assignments/media-types/application/vnd.eudora.data,,False
 application/vnd.ezpix-album,application,vnd.ezpix-album,http://www.iana.org/assignments/media-types/application/vnd.ezpix-album,,False
@@ -320,8 +322,9 @@ application/vnd.geometry-explorer,application,vnd.geometry-explorer,http://www.i
 application/vnd.geonext,application,vnd.geonext,http://www.iana.org/assignments/media-types/application/vnd.geonext,,False
 application/vnd.geoplan,application,vnd.geoplan,http://www.iana.org/assignments/media-types/application/vnd.geoplan,,False
 application/vnd.geospace,application,vnd.geospace,http://www.iana.org/assignments/media-types/application/vnd.geospace,,False
+application/vnd.globalplatform.card-content-mgt,application,vnd.globalplatform.card-content-mgt,http://www.iana.org/assignments/media-types/application/vnd.globalplatform.card-content-mgt,,False
 application/vnd.globalplatform.card-content-mgt-response,application,vnd.globalplatform.card-content-mgt-response,http://www.iana.org/assignments/media-types/application/vnd.globalplatform.card-content-mgt-response,,False
-application/vnd.gmx (OBSOLETE),application,vnd.gmx (OBSOLETE),http://www.iana.org/assignments/media-types/application/vnd.gmx,,False
+application/vnd.gmx,application,vnd.gmx,http://www.iana.org/assignments/media-types/application/vnd.gmx,,True
 application/vnd.google-earth.kml+xml,application,vnd.google-earth.kml+xml,http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml,,False
 application/vnd.google-earth.kmz,application,vnd.google-earth.kmz,http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz,,False
 application/vnd.grafeq,application,vnd.grafeq,http://www.iana.org/assignments/media-types/application/vnd.grafeq,,False
@@ -572,6 +575,21 @@ application/vnd.pwg-multiplexed,application,vnd.pwg-multiplexed,,http://www.rfc-
 application/vnd.pwg-xhtml-print+xml,application,vnd.pwg-xhtml-print+xml,http://www.iana.org/assignments/media-types/application/vnd.pwg-xhtml-print+xml,,False
 application/vnd.qualcomm.brew-app-res,application,vnd.qualcomm.brew-app-res,http://www.iana.org/assignments/media-types/application/vnd.qualcomm.brew-app-res,,False
 application/vnd.Quark.QuarkXPress,application,vnd.Quark.QuarkXPress,http://www.iana.org/assignments/media-types/application/vnd.Quark.QuarkXPress,,False
+application/vnd.radisys.moml+xml,application,vnd.radisys.moml+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-audit-conf+xml,application,vnd.radisys.msml-audit-conf+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-audit-conn+xml,application,vnd.radisys.msml-audit-conn+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-audit-dialog+xml,application,vnd.radisys.msml-audit-dialog+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-audit-stream+xml,application,vnd.radisys.msml-audit-stream+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-audit+xml,application,vnd.radisys.msml-audit+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-conf+xml,application,vnd.radisys.msml-conf+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-base+xml,application,vnd.radisys.msml-dialog-base+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-fax-detect+xml,application,vnd.radisys.msml-dialog-fax-detect+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-fax-sendrecv+xml,application,vnd.radisys.msml-dialog-fax-sendrecv+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-group+xml,application,vnd.radisys.msml-dialog-group+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-speech+xml,application,vnd.radisys.msml-dialog-speech+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog-transform+xml,application,vnd.radisys.msml-dialog-transform+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml-dialog+xml,application,vnd.radisys.msml-dialog+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
+application/vnd.radisys.msml+xml,application,vnd.radisys.msml+xml,,http://tools.ietf.org/html/draft-saleem-msml-09,False
 application/vnd.rapid,application,vnd.rapid,http://www.iana.org/assignments/media-types/application/vnd.rapid,,False
 application/vnd.realvnc.bed,application,vnd.realvnc.bed,http://www.iana.org/assignments/media-types/application/vnd.realvnc.bed,,False
 application/vnd.recordare.musicxml,application,vnd.recordare.musicxml,http://www.iana.org/assignments/media-types/application/vnd.recordare.musicxml,,False
@@ -707,7 +725,7 @@ application/xcap-ns+xml,application,xcap-ns+xml,,http://www.rfc-editor.org/rfc/r
 application/xcon-conference-info-diff+xml,application,xcon-conference-info-diff+xml,,http://tools.ietf.org/html/draft-ietf-xcon-event-package,False
 application/xcon-conference-info+xml,application,xcon-conference-info+xml,,http://tools.ietf.org/html/draft-ietf-xcon-event-package,False
 application/xenc+xml,application,xenc+xml,http://www.iana.org/assignments/media-types/application/xenc+xml,,False
-application/xhtml-voice+xml (Obsolete),application,xhtml-voice+xml (Obsolete),,https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&filename=draft-mccobb-xplusv-media-type,False
+application/xhtml-voice+xml,application,xhtml-voice+xml,,https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&filename=draft-mccobb-xplusv-media-type,True
 application/xhtml+xml,application,xhtml+xml,,http://www.rfc-editor.org/rfc/rfc3236.txt,False
 application/xml,application,xml,,http://www.rfc-editor.org/rfc/rfc3023.txt,False
 application/xml-dtd,application,xml-dtd,,http://www.rfc-editor.org/rfc/rfc3023.txt,False
@@ -800,6 +818,7 @@ audio/t140c,audio,t140c,,http://www.rfc-editor.org/rfc/rfc4351.txt,False
 audio/t38,audio,t38,,http://www.ietf.org/rfc/rfc4612.txt,False
 audio/telephone-event,audio,telephone-event,,http://www.rfc-editor.org/rfc/rfc4733.txt,False
 audio/tone,audio,tone,,http://www.rfc-editor.org/rfc/rfc4733.txt,False
+audio/UEMCLIP,audio,UEMCLIP,,http://tools.ietf.org/html/draft-ietf-avt-rtp-uemclip-06,False
 audio/ulpfec,audio,ulpfec,,http://www.rfc-editor.org/rfc/rfc5109.txt,False
 audio/VDVI,audio,VDVI,,http://www.rfc-editor.org/rfc/rfc4856.txt,False
 audio/VMR-WB,audio,VMR-WB,,http://www.rfc-editor.org/rfc/rfc4348.txt,False
@@ -967,6 +986,7 @@ text/vnd.latex-z,text,vnd.latex-z,http://www.iana.org/assignments/media-types/te
 text/vnd.motorola.reflex,text,vnd.motorola.reflex,http://www.iana.org/assignments/media-types/text/vnd.motorola.reflex,,False
 text/vnd.ms-mediapackage,text,vnd.ms-mediapackage,http://www.iana.org/assignments/media-types/text/vnd.ms-mediapackage,,False
 text/vnd.net2phone.commcenter.command,text,vnd.net2phone.commcenter.command,http://www.iana.org/assignments/media-types/text/vnd.net2phone.commcenter.command,,False
+text/vnd.radisys.msml-basic-layout,text,vnd.radisys.msml-basic-layout,,http://tools.ietf.org/html/draft-saleem-msml-09,False
 text/vnd.si.uricatalogue,text,vnd.si.uricatalogue,http://www.iana.org/assignments/media-types/text/vnd.si.uricatalogue,,False
 text/vnd.sun.j2me.app-descriptor,text,vnd.sun.j2me.app-descriptor,http://www.iana.org/assignments/media-types/text/vnd.sun.j2me.app-descriptor,,False
 text/vnd.trolltech.linguist,text,vnd.trolltech.linguist,http://www.iana.org/assignments/media-types/text/vnd.trolltech.linguist,,False

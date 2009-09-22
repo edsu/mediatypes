@@ -2,22 +2,7 @@
 
 {% block content %}
 
-<div id="wrap">
-
-<div id="left_column">
-    <table>
-    <tr>
-        <th>Content Types</th>
-    </tr>
-    {% for t in types %}
-    <tr class="{% cycle a,b %}">
-        <td><a href="/{{ t }}">{{ t }}</a></td>
-    </tr>
-    {% endfor %}
-</table>
-</div>
-
-<div about="http://purl.org/NET/mediatypes" typeof="void:DataSet" id="right_column">
+<div about="http://purl.org/NET/mediatypes" typeof="void:DataSet">
 <p>
 This <a rel="foaf:homepage" href="http://{{ host }}">website</a> 
 mints <a href="http://www.w3.org/DesignIssues/LinkedData.html">Linked Data</a> 
@@ -43,8 +28,5 @@ If at any time IANA provides these URIs themselves the PURLs can be
 updated appropriately.
 </p>
 </div>
-
-</div>
-
 
 {% endblock %}
